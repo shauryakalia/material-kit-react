@@ -9,11 +9,16 @@ import { HelmetProvider } from 'react-helmet-async';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import reportWebVitals from './reportWebVitals';
+import './vwo';
 
 // ----------------------------------------------------------------------
 
 ReactDOM.render(
   <HelmetProvider>
+    <Helmet>
+        <script src={withPrefix('vwo.js')} type="text/javascript" />
+        <script src={withPrefix('hotjar.js')} type="text/javascript"></script>
+    </Helmet>
     <BrowserRouter>
       <App />
     </BrowserRouter>
